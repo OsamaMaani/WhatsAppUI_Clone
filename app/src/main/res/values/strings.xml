@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">whatsapp_ui</string>
+    <string name="chats">CHATS</string>
+    <string name="status">STATUS</string>
+    <string name="calls">CALLS</string>
+    <string name="toolbar_title">WhatsApp UI Clone</string>
+</resources>

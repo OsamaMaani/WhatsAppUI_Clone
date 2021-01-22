@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    >
+    <ImageView
+        android:id="@+id/img_calls"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_image_background"
+        android:src="@drawable/book"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="40dp"
+        >
+
+        <TextView
+            android:id="@+id/calls_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/calls_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textColor="#BAB6B6"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_foreground"
+
+        />
+</LinearLayout>
