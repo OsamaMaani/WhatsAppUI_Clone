@@ -1,9 +1,10 @@
 package com.example.whatsapp_ui.adapters;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.whatsapp_ui.R;
 import com.example.whatsapp_ui.pojo.StatusItem;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class StatusRecyclerAdapter extends RecyclerView.Adapter<StatusRecyclerAd
 
     @Override
     public void onBindViewHolder(@NonNull StatusViewHolder holder, int position) {
-        holder.img.setImageResource(R.drawable.ic_launcher_foreground);
+        holder.img.setImageResource(R.drawable.book);
         holder.date.setText(mStatusItemList.get(position).getDate());
         holder.title.setText(mStatusItemList.get(position).getChatName());
     }
@@ -45,12 +47,13 @@ public class StatusRecyclerAdapter extends RecyclerView.Adapter<StatusRecyclerAd
     }
 
     public class StatusViewHolder  extends RecyclerView.ViewHolder {
-        ImageView img;
+        CircularImageView img;
         TextView title;
         TextView date;
         public StatusViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img_status);
+            img.setBorderColor(Color.BLACK);
             title = itemView.findViewById(R.id.status_title);
             date = itemView.findViewById(R.id.status_date);
 

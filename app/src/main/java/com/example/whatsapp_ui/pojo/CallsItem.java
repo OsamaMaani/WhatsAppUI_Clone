@@ -4,12 +4,12 @@ public class CallsItem {
 
     private String chatName;
     private String date;
-    private String image;
 
-    public CallsItem(String chatName, String date, String image) {
+
+    public CallsItem(String chatName, String date) {
         this.chatName = chatName;
         this.date = date;
-        this.image = image;
+
     }
 
     public String getChatName() {
@@ -20,7 +20,5 @@ public class CallsItem {
         return date;
     }
 
-    public String getImage() {
-        return image;
-    }
+
 }

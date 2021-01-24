@@ -1,6 +1,7 @@
 package com.example.whatsapp_ui.adapters;
 
-import android.content.Context;
+
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.whatsapp_ui.R;
 import com.example.whatsapp_ui.pojo.CallsItem;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class CallsRecyclerAdapter extends RecyclerView.Adapter<CallsRecyclerAdap
 
     @Override
     public void onBindViewHolder(@NonNull CallsViewHolder holder, int position) {
-        holder.img.setImageResource(R.drawable.ic_launcher_foreground);
+        holder.img.setImageResource(R.drawable.book);
         holder.date.setText(mCallsItems.get(position).getDate());
         holder.title.setText(mCallsItems.get(position).getChatName());
     }
@@ -45,12 +47,13 @@ public class CallsRecyclerAdapter extends RecyclerView.Adapter<CallsRecyclerAdap
     }
 
     public class CallsViewHolder extends RecyclerView.ViewHolder {
-        ImageView img;
+        CircularImageView img;
         TextView title;
         TextView date;
         public CallsViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img_calls);
+            img.setBorderColor(Color.BLACK);
             title = itemView.findViewById(R.id.calls_title);
             date = itemView.findViewById(R.id.calls_date);
         }

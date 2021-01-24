@@ -6,14 +6,14 @@
     android:orientation="horizontal"
     android:layout_margin="10dp"
     >
+
     <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/img_calls"
-        android:layout_width="40dp"
+        android:id="@+id/img_contact"
+        android:layout_width="50dp"
         android:layout_height="40dp"
-        android:background="@drawable/rounded_image_background"
+        android:paddingRight="10dp"
         android:src="@drawable/book"
         />
-
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -22,26 +22,22 @@
         >
 
         <TextView
-            android:id="@+id/calls_title"
+            android:textDirection="ltr"
+            android:id="@+id/contact_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="title"
+            android:text="Name"
             android:textStyle="bold"
             />
 
         <TextView
-            android:id="@+id/calls_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="date"
+            android:text="Hey there I am using WhatsApp!"
             android:textColor="#BAB6B6"
             />
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/phone_foreground" />
 
 </LinearLayout>

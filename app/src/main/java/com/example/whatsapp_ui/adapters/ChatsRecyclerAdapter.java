@@ -1,5 +1,6 @@
 package com.example.whatsapp_ui.adapters;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.whatsapp_ui.R;
 import com.example.whatsapp_ui.pojo.ChatItem;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.List;
 
@@ -18,7 +20,9 @@ public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ChatsRecyclerAdap
 
     private List<ChatItem> mChatItemList;
 
+    public ChatsRecyclerAdapter(){
 
+    }
 
     @NonNull
     @Override
@@ -45,13 +49,14 @@ public class ChatsRecyclerAdapter extends RecyclerView.Adapter<ChatsRecyclerAdap
     }
 
     public class ChatsViewHolder extends RecyclerView.ViewHolder {
-        ImageView img;
+        CircularImageView img;
         TextView title;
         TextView date;
         TextView details;
         public ChatsViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img_chat);
+            img.setBorderColor(Color.BLACK);
             title = itemView.findViewById(R.id.chat_title);
             date = itemView.findViewById(R.id.chat_date);
             details = itemView.findViewById(R.id.chat_detail);
